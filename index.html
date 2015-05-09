@@ -27,15 +27,14 @@ The algorithm description can be found <a href="http://www.codeproject.com/Artic
 </div>
 </div>
 <div class="pure-form center">
-<input id="textEntry" type="text" placeholder="Type in a bit of text...">
+<input id="textEntry" type="text" autocomplete="off" placeholder="Type in a bit of text...">
 <p id="result" style="font-family:Helvetica,sans-serif">Result: </p>
 </div>
 <script src="gibberish.min.js"></script>
 <script>
-document.querySelector('#textEntry')
-.addEventListener('input', function(){
+setTimeout(function(){
   document.querySelector('#result').innerHMTL = 'This text has a change of ' + gibberish.detect(document.querySelector('#textEntry').innerHTML) + 'percent of being gibberish.';
-});
+}, 500);
 </script>
 </body>
 </html>
