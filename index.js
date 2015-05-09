@@ -95,7 +95,7 @@
     if (verifyEmptyness(string))
       return 0;
 
-    var chuncks = divideByChunks(string);
+    var chunks = divideByChunks(string);
 
     var uniqueCharsInArray = getAverage(getUniqueCharsInArray(chunks));
     var vowelFrequency = getVowelFrequency(string);
