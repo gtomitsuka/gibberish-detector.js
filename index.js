@@ -16,6 +16,17 @@ function divideByChunks(string){
   return charArray;
 };
 
+function getUniqueCharsInChunk(string){
+  return getUnique(string).length;
+}
+
+function getUniqueCharsInArray(array){
+  var result = [];
+  for(var i = 0; i < array.length; i++){
+    result.push(getUniqueCharsInChunk(array[i]));
+  }
+}
+
 function getVowelFrequency(string) {
   var vowelFreq = 0;
   var normalFreq = 0;
@@ -55,6 +66,21 @@ var classificationFunction = function(string){
     return 0;
   
   var array = divideByChunks(string);
+  
+}
+
+//Utility Functions
+function getUnique(s){
+  var chars = {}, rv = '';
+
+  for (var i = 0; i < s.length; ++i) {
+    if (!(s[i] in chars)) {
+      chars[s[i]] = 1;
+      rv += s[i];
+    }
+  }
+
+  return rv;
 }
 
 //Thanks to Jano González from SE for this
