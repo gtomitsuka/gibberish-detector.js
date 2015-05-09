@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>gibberish-detector.js</title>
+<style>
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    background-color: #b0e0e6;
+}
+//Credits to http://codepen.io/zessx/pen/rDEAl/
+.sky-gradient { background: linear-gradient(to bottom, #2473ab 0%,#1e528e 70%,#5b7983 100%); }
+</style>
+</head>
+<body class="sky-gradient">
+<div class="pure-g">
+<div class="pure-u-1-3 center">
+<p style="font-family:Helvetica,sans-serif">
+Original Algorithm by @<a href="https://github.com/ProgramFOX">ProgramFOX</a>. 
+JavaScript Port by @<a href="https://github.com/gtomitsuka">gtomitsuka</a>.<br>
+The algorithm was originally made for C# and Python and the C# version has a repo <a href="https://github.com/ProgramFOX/GibberishClassifier.NET">here</a>.<br>
+The algorithm description can be found <a href="http://www.codeproject.com/Articles/894766/Gibberish-Classification-Algorithm-and-Implementat">here</a>.
+</p>
+</div>
+</div>
+<form class="pure-form center">
+  <fieldset>
+    <legend><a href="https://github.com/gtomitsuka/gibberish-detector.js">gibberish-detector.js</a></legend>
+    <input id="textEntry" type="text" placeholder="Type in a bit of text...">
+  </fieldset>
+</form>
+<p id="result" style="font-family:Helvetica,sans-serif">Result: </p>
+<script src="gibberish-detector.min.js"></script>
+<script>
+document.querySelector('#textEntry')
+.addEventListener('input', function(){
+  document.querySelector('#result').innerHMTL = 'This text has a change of ' + gibberish.detect(document.querySelector('#textEntry').innerHTML) + 'percent of being gibberish.';
+});
+</script>
+</body>
+</html>
