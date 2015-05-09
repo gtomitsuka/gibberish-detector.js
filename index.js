@@ -1,4 +1,4 @@
-/* Open-source! Made by Gabriel Tomitsuka. Original Version by @ProgramFOX */
+/* Open-source! JS Port by Gabriel Tomitsuka. Original Version by @ProgramFOX */
 
 //This function divides the string 
 function divideByChunks(string){
@@ -25,6 +25,15 @@ function getUniqueCharsInArray(array){
   for(var i = 0; i < array.length; i++){
     result.push(getUniqueCharsInChunk(array[i]));
   }
+  return result;
+}
+
+function getAverage(a){
+  var sum = 0;
+  for( var i = 0; i < a.length; i++){
+    sum += parseFloat(a[i], 10);
+  }
+  return sum / a.length;
 }
 
 function getVowelFrequency(string) {
@@ -65,8 +74,17 @@ var classificationFunction = function(string){
   if(verifyEmptyness(string))
     return 0;
   
-  var array = divideByChunks(string);
+  var chuncks = divideByChunks(string);
   
+  var uniqueCharsInArray = getAverage(getUniqueCharsInArray(chunks));
+  var vowelFrequency = getVowelFrequency(string);
+  var wordToCharRatio = getWordToCharRatio(string);
+  
+  var uniqueCharsInArrayDev = Math.max(1, getDeviationScore(uniqueCharsInArray, 45, 50));
+  var vowelFrequencyDev = Math.max(1, getDeviationScore(vowelFrequency, 35, 45));
+  var wordToCharRatioDev = Math.max(1, getDeviationScore(wordToCharRatio, 15, 20));
+  
+  return Math.max(1, Math.log10(uniqueCharsInArrayDev) + Math.log10(vowelFrequencyDev) + Math.log10(wordToCharRatioDev));
 }
 
 //Utility Functions
