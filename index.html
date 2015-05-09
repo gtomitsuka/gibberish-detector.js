@@ -32,6 +32,10 @@ a {
     font-family:Helvetica,sans-serif; 
     color: #F0FFFF;
 }
+
+#textEntry {
+    
+}
 </style>
 <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
 </head>
@@ -47,7 +51,7 @@ The algorithm description can be found <a href="http://www.codeproject.com/Artic
 </p>
 <br>
 <h3 class="text">Demo</h3>
-<div class="pure-form center">
+<div class="pure-form center" style="width: 30%">
 <input id="textEntry" type="text" autocomplete="off" placeholder="Type in a bit of text...">
 <p id="result" class="text">Loading scripts...</p>
 </div>
@@ -55,8 +59,9 @@ The algorithm description can be found <a href="http://www.codeproject.com/Artic
 </div>
 <script src="gibberish.min.js"></script>
 <script>
+document.getElementById('result').innerHMTL = "Write some text to get started :D"
 setInterval(function(){
-  document.querySelector('#result').innerHMTL = 'This text has a chance of ' + gibberish.detect(document.querySelector('#textEntry').value) + '% of being gibberish.';
+  document.getElementById('result').innerHMTL = 'This text has a chance of ' + gibberish.detect(document.getElementById('textEntry').value) + '% of being gibberish.';
 }, 500);
 </script>
 </body>
