@@ -33,7 +33,7 @@ The algorithm description can be found <a href="http://www.codeproject.com/Artic
 <script src="gibberish.min.js"></script>
 <script>
 setTimeout(function(){
-  document.querySelector('#result').innerHMTL = 'This text has a change of ' + gibberish.detect(document.querySelector('#textEntry').innerHTML) + 'percent of being gibberish.';
+  document.querySelector('#result').innerHMTL = 'This text has a chance of ' + gibberish.detect(document.querySelector('#textEntry').value) + '% of being gibberish.';
 }, 500);
 </script>
 </body>
