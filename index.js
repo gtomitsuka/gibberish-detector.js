@@ -27,7 +27,7 @@
     for (var i = 0; i < array.length; i++) {
       result.push(getUniqueCharsInChunk(array[i]));
     }
-    return result;
+    return result * 100;
   }
 
   function getAverage(a) {
