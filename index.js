@@ -2,6 +2,8 @@
 
 (function (exports) {
   'use strict';
+  
+  var log = function(){return console.log;}
   //This function divides the string in chunks 
   function divideByChunks(string) {
     var charArray = [];
@@ -101,10 +103,13 @@
     var vowelFrequency = getVowelFrequency(string);
     var wordToCharRatio = getWordToCharRatio(string);
 
+    log();
+    log();
+    log();
     var uniqueCharsInArrayDev = Math.max(1, getDeviationScore(uniqueCharsInArray, 45, 50));
     var vowelFrequencyDev = Math.max(1, getDeviationScore(vowelFrequency, 35, 45));
     var wordToCharRatioDev = Math.max(1, getDeviationScore(wordToCharRatio, 15, 20));
 
-    return Math.max(1, Math.log10(uniqueCharsInArrayDev) + Math.log10(vowelFrequencyDev) + Math.log10(wordToCharRatioDev));
+    return Math.max(1, (Math.log10(uniqueCharsInArrayDev) + Math.log10(vowelFrequencyDev) + Math.log10(wordToCharRatioDev)) / 6 * 100);
   }
 })(typeof exports === 'undefined' ? this['gibberish'] = {} : exports);
