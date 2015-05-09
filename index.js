@@ -3,7 +3,6 @@
 (function (exports) {
   'use strict';
   
-  var log = function(){return console.log;}
   //This function divides the string in chunks 
   function divideByChunks(string) {
     var charArray = [];
@@ -108,9 +107,6 @@
     var vowelFrequency = getVowelFrequency(string);
     var wordToCharRatio = getWordToCharRatio(string);
 
-    log(uniqueCharsInArray);
-    log(vowelFrequency);
-    log(wordToCharRatio);
     var uniqueCharsInArrayDev = Math.max(1, getDeviationScore(uniqueCharsInArray, 45, 50));
     var vowelFrequencyDev = Math.max(1, getDeviationScore(vowelFrequency, 35, 45));
     var wordToCharRatioDev = Math.max(1, getDeviationScore(wordToCharRatio, 15, 20));
