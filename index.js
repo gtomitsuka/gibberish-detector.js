@@ -67,9 +67,9 @@
 
   function getDeviationScore(percentage, lowerBound, upperBound) {
     if (percentage < lowerBound)
-      return Math.log(lowerBound - percentage, lowerBound) * 100;
+      return getBaseLog(lowerBound - percentage, lowerBound) * 100;
     else if (percentage > upperBound)
-      return Math.log(percentage - upperBound, 100 - upperBound) * 100;
+      return getBaseLog(percentage - upperBound, 100 - upperBound) * 100;
     else
       return 0;
   }
@@ -87,12 +87,17 @@
     }
 
     return rv;
-  }
+  };
 
   //Thanks to Jano González from SE for this
   function verifyEmptyness(str) {
     return (str.length === 0 || !str.trim());
   };
+  
+  function getBaseLog(x, y) {
+    return Math.log(y) / Math.log(x);
+  };
+  
   exports.detect = function (string) {
     if (verifyEmptyness(string))
       return 0;
@@ -111,5 +116,5 @@
     var wordToCharRatioDev = Math.max(1, getDeviationScore(wordToCharRatio, 15, 20));
 
     return Math.max(1, (Math.log10(uniqueCharsInArrayDev) + Math.log10(vowelFrequencyDev) + Math.log10(wordToCharRatioDev)) / 6 * 100);
-  }
+  };
 })(typeof exports === 'undefined' ? this['gibberish'] = {} : exports);
