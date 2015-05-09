@@ -41,15 +41,17 @@ JavaScript Port by @<a href="https://github.com/gtomitsuka">gtomitsuka</a>.<br>
 The algorithm was originally made for C# and Python and the C# version has a repo <a href="https://github.com/ProgramFOX/GibberishClassifier.NET">here</a>.<br>
 The algorithm description can be found <a href="http://www.codeproject.com/Articles/894766/Gibberish-Classification-Algorithm-and-Implementat">here</a>.
 </p>
-</div>
-</div>
+<br>
+<h3 class="text">Demo</h3>
 <div class="pure-form center">
 <input id="textEntry" type="text" autocomplete="off" placeholder="Type in a bit of text...">
-<p id="result" class="text">Result: </p>
+<p id="result" class="text">Loading scripts...</p>
+</div>
+</div>
 </div>
 <script src="gibberish.min.js"></script>
 <script>
-setTimeout(function(){
+setInterval(function(){
   document.querySelector('#result').innerHMTL = 'This text has a chance of ' + gibberish.detect(document.querySelector('#textEntry').value) + '% of being gibberish.';
 }, 500);
 </script>
