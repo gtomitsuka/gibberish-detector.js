@@ -13,6 +13,7 @@
     background-repeat: no-repeat;
 }
 </style>
+<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
 </head>
 <body class="sky-gradient" style="height: 100%">
 <div class="pure-g">
@@ -25,8 +26,10 @@ The algorithm description can be found <a href="http://www.codeproject.com/Artic
 </p>
 </div>
 </div>
-<input class="pure-form center" id="textEntry" type="text" placeholder="Type in a bit of text...">
+<div class="pure-form center">
+<input id="textEntry" type="text" placeholder="Type in a bit of text...">
 <p id="result" style="font-family:Helvetica,sans-serif">Result: </p>
+</div>
 <script src="gibberish.min.js"></script>
 <script>
 document.querySelector('#textEntry')
