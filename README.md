@@ -20,7 +20,7 @@ gibberish.detect('euzbfdhuifdgiuhdsiudvbdjibgdfijbfdsiuddsfhjibfsdifdhbfd'); //<
 
 ### With browser JavaScript
 
-Add the following script to your HTML: `<script src="gibberish.min.js"></script>`
+Add the following script to your HTML: `<script src="gibberish.min.js"></script>`, or `<script src="//gtomitsuka.github.io/gibberish-detector.js/gibberish.min.js"></script>`
 
 ``` javascript
 gibberish.detect('This sentence is totally valid.'); //<- returns 1
