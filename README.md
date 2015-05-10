@@ -2,7 +2,7 @@
 Gibberish Classification Algorithm in JavaScript
 Check an example [here](https://gtomitsuka.github.io/gibberish-detector.js).
 
-***NOTE:*** This module is in development.
+***NOTE:*** This module is in development. It also doesn't work with too short sentences, so please don't use it for chat messages.
 
 ## Quick-start
 
