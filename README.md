@@ -1,9 +1,7 @@
 # gibberish-detector.js
 Gibberish Classification Algorithm in JavaScript
 
-This library is a port from @[ProgramFOX](https://github.com/ProgramFOX)'s [GibberishClassifier.NET](https://github.com/ProgramFOX/GibberishClassifier.NET).
-
-The algorithm's description can be found [here](http://www.codeproject.com/Articles/894766/Gibberish-Classification-Algorithm-and-Implementat).
+This library is inspired by @[ProgramFOX](https://github.com/ProgramFOX)'s [GibberishClassifier.NET](https://github.com/ProgramFOX/GibberishClassifier.NET).
 
 Check an example [here](https://gtomitsuka.github.io/gibberish-detector.js).
 
