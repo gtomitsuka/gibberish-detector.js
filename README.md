@@ -5,8 +5,6 @@ This library is inspired by @[ProgramFOX](https://github.com/ProgramFOX)'s [Gibb
 
 Check an example [here](https://gtomitsuka.github.io/gibberish-detector.js).
 
-***NOTE:*** This module is in development. It also doesn't work with too short sentences, so please don't use it for chat messages.
-
 ## Quick-start
 
 ### With Node.js
@@ -33,4 +31,4 @@ gibberish.detect('euzbfdhuifdgiuhdsiudvbdjibgdfijbfdsiuddsfhjibfsdifdhbfd'); //<
 # Documentation
 
 # #detect(string)
-Returns a float between 1 and 100 that shows the porcentage that the string is gibberish.
+Returns a float between 1 and 100 with the likelihood the given string is gibberish.
