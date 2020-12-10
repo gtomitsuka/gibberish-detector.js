@@ -1,5 +1,3 @@
-/* Open-source! JS Port by Gabriel Tomitsuka. Original Version by @ProgramFOX */
-
 (function (exports) {
   'use strict';
   
